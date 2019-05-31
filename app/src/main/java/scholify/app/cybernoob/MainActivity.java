@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         SharedPreferences pref = getSharedPreferences("prefs",MODE_PRIVATE);
-        boolean first = pref.getBoolean("first",true);
-        boolean Logged = pref.getBoolean("logged",false);
+        Boolean first = pref.getBoolean("first",true);
+        Boolean Logged = pref.getBoolean("logged",false);
         if(first)
         {
             Toast.makeText(this, "This is your first time,move to tabview", Toast.LENGTH_LONG).show();
