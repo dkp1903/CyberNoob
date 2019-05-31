@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">CyberNoob</string>
-    <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
@@ -30,4 +29,5 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name = "appbar_scrolling_view_behavior">I dont know what to write here</string>
     <string name = "prompt_password">Cmon..you know it</string>
+    <string name="welcome_to_cybernoob_app">Welcome to CyberNoob App</string>
 </resources>

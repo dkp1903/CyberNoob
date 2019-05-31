@@ -49,8 +49,6 @@
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
                 android:hint="@string/hint_password"
-                android:imeActionId="@+id/login"
-                android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -65,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@color/colorAccent"
-            android:text="@string/action_sign_in_short"
+            android:text="@string/common_signin_button_text"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 

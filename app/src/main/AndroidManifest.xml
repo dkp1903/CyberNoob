@@ -14,7 +14,6 @@
         <activity android:name=".SignUpActivity">
 
         </activity>
-        <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" >
             <intent-filter>
@@ -22,7 +21,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>>
+        </activity>
+        <activity android:name=".lsochooser" />
     </application>
 
 </manifest>
