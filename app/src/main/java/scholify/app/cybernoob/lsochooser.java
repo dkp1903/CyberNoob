@@ -15,6 +15,7 @@ public class lsochooser extends AppCompatActivity implements View.OnClickListene
         //TODO modify the lsochooser for choosing whether to login or signup
         findViewById(R.id.loginbtn).setOnClickListener(this);
         findViewById(R.id.signupbtn).setOnClickListener(this);
+
         //TODO move to login if user selects login else move to signup
     }
 
