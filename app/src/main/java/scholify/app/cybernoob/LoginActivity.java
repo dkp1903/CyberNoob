@@ -43,19 +43,11 @@ public class LoginActivity extends AppCompatActivity {
         inputEmail =  findViewById(R.id.email);
         inputPassword = findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnSignup = (Button) findViewById(R.id.sign_up_button);
-        btnLogin = (Button) findViewById(R.id.loginbtn);
+        btnLogin = (Button) findViewById(R.id.login_btn);
         //btnReset = (Button) findViewById(R.id.btn_reset_password);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-
-        btnSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
-            }
-        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
