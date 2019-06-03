@@ -5,16 +5,17 @@ import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
-import java.util.Timer;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(getApplicationContext());
         setContentView(R.layout.activity_main);
         if(getSupportActionBar() != null)
         {
@@ -22,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         }
         SharedPreferences pref = getSharedPreferences("prefs",MODE_PRIVATE);
         boolean first = pref.getBoolean("first",true);
-        boolean Logged = pref.getBoolean("logged",false);
         if(first)
         {
             Toast.makeText(this, "This is your first time,move to tabview", Toast.LENGTH_LONG).show();
             pref.edit().putBoolean("first",false).apply();
-        }else if(Logged)
+        }else if(FirebaseAuth.getInstance().getCurrentUser() != null)
         {
             Toast.makeText(this, "You are logged in,move to home", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(MainActivity.this,home.class));
             //TODO dont do anything here
         }else
         {
